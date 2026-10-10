@@ -1,36 +1,37 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# AIdemics – AI-Based Study Planner
 
-## Getting Started
+AIdemics is a study planner designed to help students organize their academic tasks, prioritize their work, and manage their study time efficiently.
 
-First, run the development server:
+## Project Purpose
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+The purpose of AIdemics is to help students manage their academic workload, identify important and urgent tasks, and plan their study time more effectively. By combining task management features with machine learning-based priority prediction, the project aims to make study planning simpler and help students stay organized.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Features
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- Add, complete, and delete tasks
+- Prioritize tasks based on difficulty, importance, and urgency
+- Generate a daily study plan
+- Track completed and pending tasks
+- Predict task priority using machine learning
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Technologies Used
 
-## Learn More
+- Next.js
+- React
+- TypeScript
+- Python
+- Flask
+- Scikit-learn
 
-To learn more about Next.js, take a look at the following resources:
+## Machine Learning Workflow
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+1. **Data Collection:** Sample task data is created using attributes such as difficulty, importance, and urgency.
+2. **Data Preparation:** Task attributes are represented as numerical values for the machine learning model.
+3. **Model Training:** A Decision Tree classifier is trained using sample data with assigned priority labels.
+4. **User Input:** Students enter task details, including difficulty, importance, and deadline.
+5. **Priority Prediction:** The task details are sent from the frontend to the Python Flask service, which uses the trained model to predict task priority.
+6. **Result Display:** The predicted priority is returned to the website and displayed to the user.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## About the Project
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+AIdemics is a web-based study planner that helps students manage their academic tasks and organize their study schedules. Students can add tasks, set their difficulty, importance, and deadlines, track completed and pending work, and view a daily study plan. The project also incorporates a machine-learning model that predicts task priority based on task attributes, helping students identify which tasks may need more attention. Built using Next.js, TypeScript, Python, Flask, and Scikit-learn, AIdemics combines task management with machine learning to make academic planning simpler and more organized.
